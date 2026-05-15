@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html amp>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images_cam/laser-smarthome-full3x2x-90x24.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <meta name="description" content="">
+
+    <title>Connect SmartHome</title>
+
+    <link rel="canonical" href="setup.html">
+    <style amp-boilerplate>body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        background-color: #F5F5F5;
+    }
+
+    .mbr-col-md-1{
+        width: 13%;
+        font-family:'Work Sans';
+        font-size: 15px;
+        font-weight: lighter;
+    }
+
+    .mbr-col-md-1 h3{
+        font-family:'Work Sans';
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .laser-col {
+        width: 50%;
+        font-size: 13px;
+    }
+
+    @-webkit-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-moz-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-ms-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-o-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }</style>
+    <noscript>
+        <style amp-boilerplate>body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none
+        }</style>
+    </noscript>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic"
+          rel="stylesheet">
+
+    <style amp-custom>div, span, h3, h4, p, a, ul, li {
+        font-family: 'Work Sans', sans-serif !important;
+        font-weight: 500;
+    }
+
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    body {
+        position: relative;
+        font-style: normal;
+        line-height: 1.5;
+    }
+
+    section {
+        background-color: #eeeeee;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    section, .container {
+        position: relative;
+        word-wrap: break-word;
+    }
+
+    h3 {
+        margin: auto;
+    }
+
+    h3, p {
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    p, li {
+        color: #15181b;
+        letter-spacing: 0.5px;
+        line-height: 1.7;
+    }
+
+    ul {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    a {
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer
+    }
+
+    a, a:hover {
+        text-decoration: none
+    }
+
+    h3, h4, .display-2, .display-4 {
+        line-height: 1;
+        word-break: break-word;
+        word-wrap: break-word
+    }
+
+    body {
+        height: auto;
+        min-height: 100vh
+    }
+
+    .mbr-section-title {
+        font-style: normal;
+        line-height: 1.2
+    }
+
+    .mbr-text {
+        font-style: normal;
+        line-height: 1.6
+    }
+
+    .btn {
+        font-weight: 400;
+        border-width: 2px;
+        border-style: solid;
+        font-style: normal;
+        letter-spacing: 2px;
+        margin: .4rem .5rem;
+        white-space: normal;
+        -webkit-transition: all .3s ease-in-out, -webkit-box-shadow 2s ease-in-out;
+        transition: all .3s ease-in-out, -webkit-box-shadow 2s ease-in-out;
+        -o-transition: all .3s ease-in-out, box-shadow 2s ease-in-out;
+        transition: all .3s ease-in-out, box-shadow 2s ease-in-out;
+        transition: all .3s ease-in-out, box-shadow 2s ease-in-out, -webkit-box-shadow 2s ease-in-out;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        word-break: break-word;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        display: -webkit-inline-flex
+    }
+
+    .card {
+        background-color: transparent;
+        border: none
+    }
+
+    .card-wrapper {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+    }
+
+    .card-img {
+        text-align: center;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        -webkit-flex-shrink: 0;
+    }
+
+    section.slider .amp-carousel-button {
+        cursor: pointer
+    }
+
+    amp-image-lightbox a.control {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        right: 16px;
+        top: 16px;
+        z-index: 1000
+    }
+
+    amp-image-lightbox a.control .close {
+        position: relative
+    }
+
+    amp-image-lightbox a.control .close:before, amp-image-lightbox a.control .close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color: #fff
+    }
+
+    amp-image-lightbox a.control .close:before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+    amp-image-lightbox a.control .close:after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+
+    #scrollToTop {
+        display: none
+    }
+
+    .mbr-white {
+        color: #ffffff
+    }
+
+    .align-left {
+        text-align: left
+    }
+
+    .align-center {
+        text-align: center
+    }
+
+    .align-right {
+        text-align: right
+    }
+
+    @media (max-width: 767px) {
+        .align-left, .align-center, .align-right, .mbr-section-title {
+            text-align: center
+        }
+    }
+
+    .mbr-light {
+        font-weight: 300
+    }
+
+    .mbr-bold {
+        font-weight: 700
+    }
+
+    amp-img img {
+        max-height: 100%;
+        max-width: 100%
+    }
+
+    .is-builder amp-img > a + img[async], .is-builder amp-img > a + img[decoding="async"] {
+        display: none
+    }
+
+    html:not(.is-builder) amp-img > a {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1
+    }
+
+    .is-builder .temp-amp-sizer {
+        position: absolute
+    }
+
+    .is-builder amp-youtube .temp-amp-sizer, .is-builder amp-vimeo .temp-amp-sizer {
+        position: static
+    }
+
+    .is-builder section.horizontal-menu .ampstart-btn {
+        display: none
+    }
+
+    .mobirise-spinner em {
+        width: 24px;
+        height: 24px;
+        background: #3ac;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: slide 1s infinite
+    }
+
+    .mobirise-spinner em:nth-child(1) {
+        -webkit-animation-delay: 0.1s
+    }
+
+    .mobirise-spinner em:nth-child(2) {
+        -webkit-animation-delay: 0.2s
+    }
+
+    .mobirise-spinner em:nth-child(3) {
+        -webkit-animation-delay: 0.3s
+    }
+
+    @-moz-keyframes slide {
+    }
+
+    @-webkit-keyframes slide {
+    }
+
+    @-o-keyframes slide {
+    }
+
+    @keyframes slide {
+    }
+
+    .mobirise-loader .amp-active > div {
+        display: none;
+    }
+
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto
+    }
+
+    @media (max-width: 767px) {
+        .container {
+            max-width: 540px
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140px
+        }
+    }
+
+    .mbr-row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -1rem;
+        margin-left: -1rem
+    }
+
+    .mbr-justify-content-center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-justify-content: center
+    }
+
+    @media (max-width: 767px) {
+        .mbr-col-sm-12 {
+            -ms-flex: 0 0 100%;
+            -webkit-box-flex: 0;
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            -webkit-flex: 0 0 100%
+        }
+
+        .mbr-row {
+            margin: 0
+        }
+    }
+
+    @media (min-width: 768px) {
+        .mbr-col-md-6 {
+            -ms-flex: 0 0 50%;
+            -webkit-box-flex: 0;
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-right: 15px;
+            padding-left: 15px;
+            -webkit-flex: 0 0 50%
+        }
+    }
+
+    @media (min-width: 992px) {
+        .mbr-col-lg-3 {
+            -ms-flex: 0 0 25%;
+            -webkit-box-flex: 0;
+            flex: 0 0 25%;
+            max-width: 25%;
+            padding-right: 15px;
+            padding-left: 15px;
+            -webkit-flex: 0 0 25%
+        }
+
+        .mbr-col-lg-4 {
+            -ms-flex: 0 0 33.33%;
+            -webkit-box-flex: 0;
+            flex: 0 0 33.33%;
+            max-width: 16%;
+            padding-right: 15px;
+            padding-left: 15px;
+            -webkit-flex: 0 0 33.33%
+        }
+
+        .mbr-col-lg-6 {
+            -ms-flex: 0 0 50%;
+            -webkit-box-flex: 0;
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-right: 15px;
+            padding-left: 15px;
+            -webkit-flex: 0 0 50%
+        }
+    }
+
+    amp-sidebar {
+        background: transparent
+    }
+
+    #scrollToTopButton a:before {
+        content: '';
+        position: absolute;
+        height: 40%;
+        top: 36%;
+        width: 2px;
+        left: calc(50% - 1px)
+    }
+
+    #scrollToTopButton a:after {
+        content: '';
+        position: absolute;
+        border-top: 2px solid;
+        border-right: 2px solid;
+        width: 40%;
+        height: 40%;
+        left: calc(30% - 1px);
+        bottom: 30%;
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg)
+    }
+
+    .is-builder #scrollToTopButton a:after {
+        left: 30%
+    }
+
+    body {
+        font-family: 'Work Sans';
+    }
+
+    section{
+        border-left: 11px solid white;
+        border-right: 11px solid white;
+    }
+
+    .display-2 {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 13pt;
+        letter-spacing: -1.1px;
+    }
+
+    .display-5 {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1.8rem;
+    }
+
+    .display-7 {
+        font-family: 'Work Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .display-product {
+        font-color: #00162F;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 768px) {
+        .display-2 {
+            font-size: 1.76rem;
+            font-size: calc(1.42rem + (2.2 - 1.42) * ((100vw - 20rem) / (48 - 20)));
+            line-height: calc(1.4 * (1.42rem + (2.2 - 1.42) * ((100vw - 20rem) / (48 - 20))))
+        }
+
+        .display-4 {
+            font-size: 0.72rem;
+            font-size: calc(0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20)));
+            line-height: calc(1.4 * (0.965rem + (0.9 - 0.965) * ((100vw - 20rem) / (48 - 20))))
+        }
+
+        .display-5 {
+            font-size: 1.44rem;
+            font-size: calc(1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
+            line-height: calc(1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))))
+        }
+    }
+
+    .btn {
+        padding: 18px 35px !important;
+        color: #467EC0 !important;
+        border-radius: 255px !important;
+        background-color: white !important;
+        border-color: #E6EDF7 !important;
+
+    }
+
+    .btn-sm {
+        border-width: 1px;
+        padding: 0.6rem 0.8rem;
+        border-radius: 0px
+    }
+
+    .btn-secondary, .btn-secondary:active {
+        background-color: #4addff;
+        border-color: #4addff;
+        color: #003c4a
+    }
+
+    .btn-secondary:hover, .btn-secondary:focus {
+        color: #003c4a;
+        background-color: #00cdfd;
+        border-color: #00cdfd
+    }
+
+    .btn-secondary:disabled {
+        color: #003c4a;
+        background-color: #00cdfd;
+        border-color: #00cdfd;
+    }
+
+    .text-black {
+        color: #000000
+    }
+
+    a.text-black:hover, a.text-black:focus {
+        color: #4d4d4d
+    }
+
+    a, a:hover {
+        color: #4ea2e3
+    }
+
+    .mobirise-spinner em:nth-child(1) {
+        background: #4ea2e3
+    }
+
+    .mobirise-spinner em:nth-child(2) {
+        background: #4addff
+    }
+
+    .mobirise-spinner em:nth-child(3) {
+        background: #0dcd7b
+    }
+
+    #scrollToTopMarker {
+        display: none
+    }
+
+    #scrollToTopButton {
+        background-color: #4ea2e3
+    }
+
+    #scrollToTopButton a:before {
+        background: #ffffff
+    }
+
+    #scrollToTopButton a:after {
+        border-top-color: #ffffff;
+        border-right-color: #ffffff
+    }
+
+    .cid-rxXvjedPF3 {
+        min-height: 80px
+    }
+
+    .cid-rxXvjedPF3 .brand-name {
+        color: #4ea2e3;
+        margin: 0
+    }
+
+    .cid-rxXvjedPF3 .nav-item:focus, .cid-rxXvjedPF3 .nav-link:focus {
+        outline: none
+    }
+
+    .cid-rxXvjedPF3 .navbar-nav {
+        list-style-type: none;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        padding-left: 0
+    }
+
+    .cid-rxXvjedPF3 .navbar-nav .nav-link {
+        margin: .667em 1em;
+        font-weight: normal
+    }
+
+    @media (max-width: 991px) {
+        .cid-rxXvjedPF3 ul.navbar-nav {
+            -webkit-flex-direction: column;
+            flex-direction: column
+        }
+
+        .cid-rxXvjedPF3 ul.navbar-nav li {
+            margin: auto
+        }
+        .cid-rxY2yMiZen {
+            display: none
+        }
+    }
+
+    .cid-rxXvjedPF3 .navbar {
+        z-index: 100;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        width: 100%;
+        min-height: 80px;
+        transition: all .3s;
+        background: #ffffff
+    }
+
+    .cid-rxXvjedPF3 .navbar .navbar-collapse {
+        display: flex;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        z-index: 1;
+        -webkit-flex-basis: 100%;
+        flex-basis: 100%;
+        -webkit-align-items: center;
+        align-items: center
+    }
+
+    @media (max-width: 991px) {
+        .cid-rxXvjedPF3 .navbar .navbar-collapse {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-height: 100vh;
+            background: #ffffff;
+            padding: 1rem 2rem 1rem 2rem
+        }
+
+        .cid-rxXvjedPF3 .navbar .brand {
+            -webkit-flex-shrink: initial;
+            flex-shrink: initial;
+            word-break: break-word
+        }
+    }
+
+    .cid-rxXvjedPF3 .brand {
+        display: flex;
+        -webkit-flex-shrink: 0;
+        flex-shrink: 0;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-right: 0;
+        padding: 0;
+        transition: all .3s;
+        word-break: break-word;
+        z-index: 1
+    }
+
+    .cid-rxXvjedPF3 .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 0;
+        color: white;
+    }
+
+    .cid-rxXvjedPF3 ul.navbar-nav {
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+
+    .cid-rxXvjedPF3 button.navbar-toggler {
+        display: none;
+        outline: none;
+        width: 31px;
+        height: 20px;
+        cursor: pointer;
+        transition: all .2s;
+        position: relative;
+        -webkit-align-self: center;
+        align-self: center
+    }
+
+    .cid-rxXvjedPF3 button.navbar-toggler .hamburger span {
+        position: absolute;
+        right: 0;
+        width: 30px;
+        height: 2px;
+        border-right: 5px;
+        background-color: #4ea2e3
+    }
+
+    .cid-rxXvjedPF3 button.navbar-toggler .hamburger span:nth-child(1) {
+        top: 0;
+        transition: all .2s
+    }
+
+    .cid-rxXvjedPF3 button.navbar-toggler .hamburger span:nth-child(2) {
+        top: 8px;
+        transition: all .15s
+    }
+
+    .cid-rxXvjedPF3 button.navbar-toggler .hamburger span:nth-child(3) {
+        top: 8px;
+        transition: all .15s
+    }
+
+    .cid-rxXvjedPF3 button.navbar-toggler .hamburger span:nth-child(4) {
+        top: 16px;
+        transition: all .2s
+    }
+
+    .cid-rxXvjedPF3 .navbar-dropdown {
+        padding: .5rem 1rem;
+        position: fixed
+    }
+
+    .cid-rxXvjedPF3 a.nav-link {
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center
+    }
+
+    .cid-rxXvjedPF3 .nav-link .mbr-iconfont {
+        margin-right: .2rem
+    }
+
+    .cid-rxXvjedPF3 .ampstart-btn {
+        display: flex;
+        -webkit-align-self: center;
+        align-self: center
+    }
+
+    @media (min-width: 992px) {
+        .cid-rxXvjedPF3 .ampstart-btn {
+            display: none
+        }
+    }
+
+    .cid-rxXvjedPF3 .ampstart-btn.hamburger {
+        position: relative;
+        right: 20px;
+        margin-left: auto;
+        width: 30px;
+        height: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1000
+    }
+
+    .cid-rxXvjedPF3 .ampstart-btn.hamburger:focus {
+        outline: none
+    }
+
+    .cid-rxXvjedPF3 .ampstart-btn.hamburger span {
+        position: absolute;
+        right: 0;
+        width: 30px;
+        height: 2px;
+        border-right: 5px;
+        background-color: #4ea2e3
+    }
+
+    .cid-rxXvjedPF3 .ampstart-btn.hamburger span:nth-child(1) {
+        top: 0;
+        transition: all .2s
+    }
+
+    .cid-rxXvjedPF3 .ampstart-btn.hamburger span:nth-child(2) {
+        top: 8px;
+        transition: all .15s
+    }
+
+    .cid-rxXvjedPF3 .ampstart-btn.hamburger span:nth-child(3) {
+        top: 8px;
+        transition: all .15s
+    }
+
+    .cid-rxXvjedPF3 .ampstart-btn.hamburger span:nth-child(4) {
+        top: 16px;
+        transition: all .2s
+    }
+
+    .cid-rxXvjedPF3 amp-sidebar {
+        min-width: 260px;
+        z-index: 1050;
+        background-color: #ffffff
+    }
+
+    .cid-rxXvjedPF3 amp-sidebar.open:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: red
+    }
+
+    .cid-rxXvjedPF3 .builder-sidebar {
+        background-color: #ffffff;
+        position: relative;
+        min-height: 100vh;
+        z-index: 1030;
+        padding: 1rem 2rem;
+        max-width: 20rem
+    }
+
+    .cid-rxXvjedPF3 .close-sidebar {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+        border: none
+    }
+
+    .cid-rxXvjedPF3 .close-sidebar:focus {
+        outline: 2px auto #4ea2e3
+    }
+
+    .cid-rxXvjedPF3 .close-sidebar span {
+        position: absolute;
+        left: 0;
+        top: 14px;
+        width: 30px;
+        height: 2px;
+        border-right: 5px;
+        background-color: #4ea2e3
+    }
+
+    .cid-rxXvjedPF3 .close-sidebar span:nth-child(1) {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+    .cid-rxXvjedPF3 .close-sidebar span:nth-child(2) {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+
+    .cid-rxXvjedPF3 amp-img {
+        margin-right: 1rem;
+        display: none;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    @media (max-width: 767px) {
+        .cid-rxXvjedPF3 amp-img {
+            max-height: 35px;
+            max-width: 35px
+        }
+    }
+
+    .cid-rxXxCoaYCP {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background: url("assets/images_cam/hero.png") no-repeat center center;
+        background-size: cover;
+    }
+
+    .cid-rxXxCoaYCP .text-block {
+        margin: auto
+    }
+
+    .cid-rxXxCoaYCP amp-img {
+        text-align: center
+    }
+
+    @media (min-width: 768px) {
+        .cid-rxXxCoaYCP .image-block {
+            padding-right: 2rem
+        }
+    }
+
+    @media (max-width: 767px) {
+        .cid-rxXxCoaYCP .image-block {
+            padding-bottom: 1rem
+        }
+    }
+
+    .cid-rxXxjnPOd7 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background-color: #F5F5F5;
+    }
+
+    .cid-rxXxjnPOd7 .card {
+        margin-bottom: 3rem;
+        position: relative;
+        display: flex;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-clip: border-box;
+        width: 100%;
+        min-height: 1px;
+    }
+
+    @media (max-width: 767px) {
+        .cid-rxXxjnPOd7 .card {
+            margin-bottom: 30px
+        }
+    }
+
+    .cid-rxXxjnPOd7 .card .btn {
+        margin: .4rem 4px
+    }
+
+    @media (min-width: 768px) {
+        .cid-rxXxjnPOd7 .card {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem
+        }
+    }
+
+    .cid-rxXxjnPOd7 .card-title {
+        margin: 0;
+        text-align: center
+    }
+
+    .cid-rxXxjnPOd7 .mbr-text {
+        color: #232323
+    }
+
+    .cid-rxXxjnPOd7 .card-box {
+        padding-top: 2rem
+    }
+
+    .cid-rxXxjnPOd7 amp-img {
+        width: 100%
+    }
+
+    @media (min-width: 768px) {
+        .cid-rxXxjnPOd7 .mbr-row {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+        }
+    }
+
+    .cid-rxXxjnPOd7 .mbr-text, .cid-rxXxjnPOd7 .mbr-section-btn {
+        text-align: center
+    }
+
+    .cid-rxXRSUfSVl {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background-color: #f1f1f1;
+    }
+
+    .cid-rxXRSUfSVl .image-wrap {
+        padding: 0;
+
+    }
+
+    .cid-rxXRSUfSVl .image-box {
+        position: relative;
+        background-color: #ffffff;
+    }
+
+    .cid-rxXRSUfSVl amp-img:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transition: all 0.3s;
+        pointer-events: none;
+        background-color: rgba(78, 162, 227, 0);
+        top: 0;
+        opacity: 0;
+    }
+
+    @media (min-width: 768px) {
+        .cid-rxXRSUfSVl .image-box:hover amp-img {
+            cursor: pointer;
+        }
+
+        .cid-rxXRSUfSVl .image-box:hover amp-img:after {
+            opacity: 1;
+        }
+
+        .cid-rxXRSUfSVl .image-box:hover .icon-wrap {
+            opacity: 1;
+        }
+    }
+
+    .cid-rxXFJactrh {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #fafafa;
+    }
+
+    .cid-rxXFJactrh .card-img {
+        margin-bottom: 1rem;
+        display: inline-block;
+        width: 100%;
+        height: 3rem;
+    }
+
+    .cid-rxXFJactrh .card-img .mbr-iconfont {
+        color: #232323;
+        font-size: 3rem;
+        width: 3rem;
+    }
+
+    @media (max-width: 767px) {
+        .cid-rxXFJactrh .card-img .mbr-iconfont {
+            font-size: 30px;
+            width: 30px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .cid-rxXFJactrh .card-img {
+            height: 30px;
+        }
+    }
+
+    .cid-rxXFJactrh .mbr-card-title {
+        margin: 0;
+        width: 100%;
+    }
+
+    .cid-rxXFJactrh .mbr-card-title, .cid-rxXFJactrh .card-img {
+        color: #232323
+    }
+
+    .cid-rxXHf041rO {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-color: #f8f8f8;
+    }
+
+    .cid-rxXHf041rO amp-img {
+        text-align: center;
+    }
+
+    .cid-rxXHf041rO .items-col .item {
+        margin: 0;
+    }
+
+    .cid-rxXHf041rO .item, .cid-rxXHf041rO .group-title {
+        color: #efefef;
+        padding-top: 0;
+    }
+
+    @media (max-width: 767px) {
+        .cid-rxXHf041rO .items-col {
+            text-align: center;
+            margin: 2rem 0;
+        }
+    }
+
+    .cid-rxXHf041rO .item, .cid-rxXHf041rO .items {
+        color: #494949;
+        text-align: left;
+    }
+
+    .cid-rxXHf041rO .group-title {
+        color: #494949;
+        text-align: left;
+    }
+
+    [class*="-iconfont"] {
+        display: inline-flex
+    }
+
+    #tab-1:hover{
+        background-color: #F5F5F5;
+        color: white;
+    }
+
+    #tab-2:hover{
+        background-color: #F5F5F5;
+        color: white;
+    }
+
+    .navbar {
+        background-color: black !important;
+        transform: translate(-11px, 0px);
+    }
+
+    .card-img img {
+        padding-top: 45px;
+    }
+
+    .left {
+        background-color:#E6E6E6;
+        padding: 10px 38px;
+        margin: 0;
+        border-radius: 255px 0 0 255px;
+        border: 3px solid #E6E6E6;
+        clear: both;
+        float: left;
+    }
+
+    .right {
+        color: #E6E6E6;
+        background-color:#FFFFFF;
+        padding: 10px 38px;
+        margin: 0;
+        border-radius: 0 255px 255px 0;
+        border: 3px solid #E6E6E6;
+        clear: both;
+    }
+
+    @media (max-width: 768px) {
+        section {
+            width: 100% !important;
+        }
+
+        .cid-rxXRSUfSVl {
+            width: 100% !important;
+        }
+
+        .lifestyle {
+            width: 100% !important;
+        }
+    }
+
+    </style>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+
+    <script>
+        function hide() {
+            document.getElementById("product_2").style.display = "none";
+            document.getElementById("product_3").style.display = "none";
+            document.getElementById("product_4").style.display = "none";
+            document.getElementById("left2").style.display = "none";
+        }
+
+        function showPanel_1() {
+            document.getElementById("product_1").style.display = "block";
+            document.getElementById("product_2").style.display = "none";
+            document.getElementById("product_3").style.display = "none";
+            document.getElementById("product_4").style.display = "none";
+            document.getElementById("left1").style.display = "block";
+            document.getElementById("left2").style.display = "none";
+        }
+
+        function showPanel_2() {
+            document.getElementById("product_1").style.display = "none";
+            document.getElementById("product_2").style.display = "block";
+            document.getElementById("product_3").style.display = "none";
+            document.getElementById("product_4").style.display = "none";
+            document.getElementById("left1").style.display = "none";
+            document.getElementById("left2").style.display = "block";
+        }
+
+        function showPanel_3() {
+            document.getElementById("product_1").style.display = "none";
+            document.getElementById("product_2").style.display = "none";
+            document.getElementById("product_3").style.display = "block";
+            document.getElementById("product_4").style.display = "none";
+        }
+
+        function showPanel_4() {
+            document.getElementById("product_1").style.display = "none";
+            document.getElementById("product_2").style.display = "none";
+            document.getElementById("product_3").style.display = "none";
+            document.getElementById("product_4").style.display = "block";
+        }
+    </script>
+
+</head>
+<body onload="hide();">
+<amp-sidebar id="sidebar" class="cid-rxXvjedPF3" layout="nodisplay" side="right">
+    <div class="builder-sidebar" id="builder-sidebar">
+        <button on="tap:sidebar.close" class="close-sidebar">
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+            <li class="nav-item"><a class="nav-link link text-black display-7" href="setup.html">
+                HOW IT WORKS</a></li>
+            <li class="nav-item"><a class="nav-link link text-black display-7" href="index.html">
+                PRODUCTS</a></li>
+            <li class="nav-item">
+                <a class="nav-link link text-black display-7" href="support.html">
+                    SUPPORT</a>
+            </li>
+        </ul>
+    </div>
+</amp-sidebar>
+<section class="menu horizontal-menu cid-rxXvjedPF3" id="menu2-0">
+    <nav class="navbar navbar-dropdown navbar-expand-lg navbar-fixed-top" height="116px">
+        <div style="margin:auto; width: 30%;"></div>
+        <div class="brand">
+            <p class="brand-name mbr-fonts-style mbr-bold display-5" style="padding: 0px; margin: 0px;">
+                <img src="assets/images_cam/logo.png" height="100%">
+            </p>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                <li class="nav-item"><a class="nav-link link display-7" href="setup.html">
+                    HOW IT WORKS</a></li>
+                <li class="nav-item"><a class="nav-link link display-7" href="index.html">
+                    PRODUCTS</a></li>
+                <li class="nav-item"><a class="nav-link link display-7" href="support.html">
+                    SUPPORT</a></li>
+            </ul>
+        </div>
+        <div style="margin:auto; width: 30%;"></div>
+        <button on="tap:sidebar.toggle" class="ampstart-btn hamburger sticky-but">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+</section>
+<section class="features10 cid-rxXxCoaYCP" id="features10-8" style="padding:auto 0 0 0 !important;width:70%; margin:auto;">
+    <div class="container">
+        <div class="mbr-row mbr-justify-content-center" style="padding-left:7%;">
+            <div class="image-block mbr-col-sm-12 mbr-col-md-6">
+                <img src="assets/images_cam/main.png" layout="responsive" height="100" alt="#">
+            </div>
+            <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="padding-left:25%;">
+                <img src="assets/images_cam/googleassistant.png">
+                <img src="assets/images_cam/alexa.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features2 mbr-section cid-rxXxjnPOd7" id="features2-6" style="width:70%; margin: 0 auto;">
+    <div class="container">
+        <div class="mbr-row mbr-justify-content-center" style="border-top:20px solid #452E8D;">
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4" style="border-right: 2px solid white;padding:0 0 45px;margin:0;">
+                <div class="card-wrapper">
+                    <a href="lighting.html" style="color:black;">
+                        <div class="card-img">
+                            <img src="assets/images_cam/lighting.png" layout="responsive" alt="#" style="height:100px; width:auto;">
+                        </div>
+                        <div class="card-box"><h4 class="card-title mbr-fonts-style align-left mbr-light display-2">Smart Lighting</h4></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4" style="border-right: 2px solid white;padding:0;margin:0;">
+                <div class="card-wrapper">
+                    <a href="sensors.html" style="color:black;">
+                        <div class="card-img">
+                            <img src="assets/images_cam/sensor.png" layout="responsive" alt="#" style="height:100px; width:auto;">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style align-left mbr-light display-2">Security Sensors</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4 last-child" style="border-right: 2px solid white;padding:0;margin:0;">
+                <div class="card-wrapper">
+                    <a href="doorbell.html" style="color:black;">
+                        <div class="card-img">
+                            <img src="assets/images_cam/new-video-doorbell.8-side-retouched-144x181.png" layout="responsive" alt="#" style="height:100px; width:auto;">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style align-left mbr-light display-2">Video Doorbells</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4" style="border-right: 2px solid white;padding:0;margin:0;">
+                <div class="card-wrapper">
+                    <a href="automation.html" style="color:black;">
+                        <div class="card-img">
+                            <img src="assets/images_cam/automation.png" layout="responsive" alt="#" style="height:100px; width:auto;">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style align-left mbr-light display-2">Automation</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4" style="border-right: 2px solid white;padding:0;margin:0;">
+                <div class="card-wrapper">
+                    <a href="power.html" style="color:black;">
+                        <div class="card-img">
+                            <img src="assets/images_cam/power.png" layout="responsive" alt="#" style="height:100px; width:auto;">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style align-left mbr-light display-2">Smart Power</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-4" style="border-right: 2px solid white;padding:0;margin:0;">
+                <div class="card-wrapper">
+                    <a href="index.html" style="color:black;">
+                        <div class="card-img">
+                            <img src="assets/images_cam/cam.png" layout="responsive" alt="#" style="height:100px; width:auto;">
+                        </div>
+                        <div class="card-box">
+                            <h4 class="card-title mbr-fonts-style align-left mbr-light display-2">Security Camera</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="lifestyle" style="background-color:#F5F5F5;width:70%;margin: 0 auto;">
+    <div class="mbr-row mbr-justify-content-center">
+        <div class="image-wrap mbr-col-sm-12 mbr-col-lg-6 lg-px mbr-col-md-6" style="padding:0;margin:0;text-align:right">
+            <div class="image-box">
+                <img src="assets/images_auto/left1.png" layout="responsive"
+                     height="373" alt="#"
+                     tabindex="0" style="padding:0;margin:0;width:37vw;border-left:11px solid white;" id="left1">
+                <img src="assets/images_auto/left2.png" layout="responsive"
+                     height="373" alt="#"
+                     tabindex="0" style="padding:0;margin:0;width:37vw;border-left:11px solid white;" id="left2">
+            </div>
+        </div>
+        <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6 lg-px last-child" style="padding:0;margin:0">
+            <div class="image-box">
+                <img src="assets/images_auto/right.png" layout="responsive"
+                     height="373" alt="#"
+                     tabindex="0" style="padding:0;margin:0; width:96%;border-right:11px solid white;">
+                </img>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gallery1 cid-rxXRSUfSVl" id="gallery2-2" style="background-color:#F5F5F5; width:68.9%;margin: 0 auto;border-left: 11px solid white;border-right: 11px solid white;">
+    <div class="mbr-row mbr-justify-content-center">
+        <div class="image-wrap lg-px mbr-col-md-6" style="text-align:center;">
+            <div class="image-box" style="display:table-cell;width:50vw;text-align:center;border-right: solid 1px #D6D6D6; cursor:pointer;" onclick="showPanel_1();">
+                <div id="tab-1">
+                    <img src="assets/images_auto/product_1-thumb.png" layout="responsive"
+                         height="93" alt="#" role="button"
+                         tabindex="0" >
+                    </img>
+                    <p>CSH-IRREM</p>
+                </div>
+            </div>
+            <div class="image-box" style="display:table-cell;width:50vw;text-align:center;border-right: solid 1px #D6D6D6; cursor:pointer;" onclick="showPanel_2();">
+                <div id="tab-2">
+                    <img src="assets/images_auto/product_2-thumb.png" layout="responsive"
+                         height="93" alt="#" role="button"
+                         tabindex="0">
+                    </img>
+                    <p>CSH-IRTEMHU</p>
+                </div>
+            </div>
+            <div style="color:white;background-color:#E7E7E7">REMOTES</div>
+        </div>
+        <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6 lg-px last-child" style="text-align:center;">
+            <div class="image-box" style="display:table-cell;width:50vw;text-align:center;border-right: solid 1px #D6D6D6; cursor:pointer;" onclick="showPanel_3();">
+                <div id="tab-1">
+                    <img src="assets/images_auto/product_3-thumb.png" layout="responsive"
+                         height="93" alt="#" role="button"
+                         tabindex="0" >
+                    </img>
+                    <p>CSH_DIFF300_PUR</p>
+                </div>
+            </div>
+            <div class="image-box" style="display:table-cell;width:50vw;text-align:center;border-right: solid 1px #D6D6D6; cursor:pointer;" onclick="showPanel_4();">
+                <div id="tab-2">
+                    <img src="assets/images_auto/product_4-thumb.png" layout="responsive"
+                         height="93" alt="#" role="button"
+                         tabindex="0">
+                    </img>
+                    <p>CSH_DIFF300</p>
+                </div>
+            </div>
+            <div style="color:white;background-color:#E7E7E7">DIFFUSERS</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="features10" style="height:528px; padding-top: 60px; background-color: #F4F4F4;" id="product_1">
+            <div class="mbr-row mbr-justify-content-center">
+                <div class="image-block mbr-col-sm-12 mbr-col-md-6">
+                    <img src="assets/images_auto/product_1.png" layout="responsive" height="405" alt="#" style="padding-left:50px;">
+                </div>
+                <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="color: #00162f !important;">
+                    <h3 class="mbr-section-title mbr-fonts-style align-left display-product">
+                        <b>Remote Control</b><br>
+                        Smart Controller
+                    </h3>
+                </div>
+            </div>
+            <div align="right" style="margin-right: 50px;">
+                <img src="assets/images_cam/googleassistant.png">
+                <img src="assets/images_cam/alexa.png">
+            </div>
+        </div>
+        <div class="features10" style="height:528px; padding-top: 60px; background-color: #F4F4F4;" id="product_2">
+            <div class="mbr-row mbr-justify-content-center">
+                <div class="image-block mbr-col-sm-12 mbr-col-md-6">
+                    <img src="assets/images_auto/product_2.png" layout="responsive" height="405" alt="#" style="padding-left:50px;">
+                </div>
+                <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="color: #00162f !important;">
+                    <h3 class="mbr-section-title mbr-fonts-style align-left display-product">
+                        <b>Remote Control</b><br>
+                        Smart Humidifier
+                    </h3>
+                </div>
+            </div>
+            <div align="right" style="margin-right: 50px;">
+                <img src="assets/images_cam/googleassistant.png">
+                <img src="assets/images_cam/alexa.png">
+            </div>
+        </div>
+        <div class="features10" style="height:528px; padding-top: 60px; background-color: #F4F4F4;" id="product_3">
+            <div class="mbr-row mbr-justify-content-center">
+                <div class="image-block mbr-col-sm-12 mbr-col-md-6">
+                    <img src="assets/images_auto/product_3.png" layout="responsive" height="405" alt="#" style="padding-left:50px;">
+                </div>
+                <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="color: #00162f !important;">
+                    <h3 class="mbr-section-title mbr-fonts-style align-left display-product">
+                        <b>Remote Control</b><br>
+                        Smart Air Diffuser
+                    </h3>
+                    <button class="left" onclick="showPanel_3()">PURPLE</button>
+                    <button class="right" onclick="showPanel_4()">BLUE</button>
+                </div>
+            </div>
+            <div align="right" style="margin-right: 50px;">
+                <img src="assets/images_cam/googleassistant.png">
+                <img src="assets/images_cam/alexa.png">
+            </div>
+        </div>
+        <div class="features10" style="height:528px; padding-top: 60px; background-color: #F4F4F4;" id="product_4">
+            <div class="mbr-row mbr-justify-content-center">
+                <div class="image-block mbr-col-sm-12 mbr-col-md-6">
+                    <img src="assets/images_auto/product_4.png" layout="responsive" height="405" alt="#" style="padding-left:50px;">
+                </div>
+                <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="color: #00162f !important;">
+                    <h3 class="mbr-section-title mbr-fonts-style align-left display-product">
+                        <b>Remote Control</b><br>
+                        Smart Air Diffuser
+                    </h3>
+                    <button class="left" onclick="showPanel_3()">PURPLE</button>
+                    <button class="right" onclick="showPanel_4()">BLUE</button>
+                </div>
+            </div>
+            <div align="right" style="margin-right: 50px;">
+                <img src="assets/images_cam/googleassistant.png">
+                <img src="assets/images_cam/alexa.png">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="features15 mbr-section cid-rxXFJactrh" id="features3-g" style="width:69%; margin: 0 auto;">
+    <div class="container">
+        <img src="assets/images_auto/features.png" width="100%">
+    </div>
+</section>
+
+<section class="footer3 cid-rxXHf041rO" id="footer3-h" style="width:69%; margin: 0 auto;">
+    <div class="container" style="padding:0;margin:0;">
+        <div class="mbr-row mbr-justify-content-center">
+            <div class="image-block mbr-col-sm-12 laser-col" style="margin: 0 auto 0 auto;width:45%;">
+                <img src="assets/images_cam/laser-logo-512x362.png" layout="responsive" alt="#" width="142.px">
+                <p>
+                    ©2019 Laser Corporation | Legal | Privacy | Laser Smarthome Safety Notice
+                    <br> www.laserco.com.au
+                </p>
+            </div>
+            <div class="items-col mbr-col-sm-12 align-right mbr-col-md-1">
+                <h3 class="mbr-fonts-style group-title mbr-bold display-5">HOW IT WORKS</h3>
+                <div class="items">
+                    <p class="item mbr-fonts-style display-7">Installation</p>
+                    <p class="item mbr-fonts-style display-7">Technology</p>
+                    <p class="item mbr-fonts-style display-7">Our App</p>
+                </div>
+            </div>
+
+            <div class="items-col mbr-col-sm-12 align-right mbr-col-md-1">
+                <h3 class="mbr-fonts-style group-title mbr-bold display-5">
+                    PRODUCTS</h3>
+                <div class="items">
+                    <p class="item mbr-fonts-style display-7">Smartlights</p>
+                    <p class="item mbr-fonts-style display-7">Security</p>
+                    <p class="item mbr-fonts-style display-7">New Products</p></div>
+            </div>
+
+            <div class="items-col mbr-col-sm-12 align-right mbr-col-md-1">
+                <h3 class="mbr-fonts-style group-title mbr-bold display-5">SUPPORT</h3>
+                <div class="items"><p class="item mbr-fonts-style display-7">Smarthome Support</p></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
