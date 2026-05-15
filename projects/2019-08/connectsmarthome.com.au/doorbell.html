@@ -107,7 +107,20 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic"
           rel="stylesheet">
 
-    <style amp-custom>div, span, h3, h4, p, a, ul, li {
+    <style amp-custom>
+    .container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+    .mbr-row {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+div, span, h3, h4, p, a, ul, li {
         font-family: 'Work Sans', sans-serif !important;
         font-weight: 500;
     }
@@ -522,8 +535,8 @@
     }
 
     section{
-        border-left: 11px solid white;
-        border-right: 11px solid white;
+        
+        
     }
 
     .display-2 {
@@ -1198,24 +1211,35 @@
         function hide() {
             document.getElementById("product_2").style.display = "none";
             document.getElementById("product_3").style.display = "none";
+            document.getElementById("lifestyle_2").style.display = "none";
+            document.getElementById("lifestyle_3").style.display = "none";
         }
 
         function showPanel_1() {
             document.getElementById("product_1").style.display = "block";
             document.getElementById("product_2").style.display = "none";
             document.getElementById("product_3").style.display = "none";
+            document.getElementById("lifestyle_1").style.display = "block";
+            document.getElementById("lifestyle_2").style.display = "none";
+            document.getElementById("lifestyle_3").style.display = "none";
         }
 
         function showPanel_2() {
             document.getElementById("product_1").style.display = "none";
             document.getElementById("product_2").style.display = "block";
             document.getElementById("product_3").style.display = "none";
+            document.getElementById("lifestyle_1").style.display = "none";
+            document.getElementById("lifestyle_2").style.display = "block";
+            document.getElementById("lifestyle_3").style.display = "none";
         }
 
         function showPanel_3() {
             document.getElementById("product_1").style.display = "none";
             document.getElementById("product_2").style.display = "none";
             document.getElementById("product_3").style.display = "block";
+            document.getElementById("lifestyle_1").style.display = "none";
+            document.getElementById("lifestyle_2").style.display = "none";
+            document.getElementById("lifestyle_3").style.display = "block";
         }
     </script>
 
@@ -1241,7 +1265,7 @@
 </amp-sidebar>
 <section class="menu horizontal-menu cid-rxXvjedPF3" id="menu2-0">
     <nav class="navbar navbar-dropdown navbar-expand-lg navbar-fixed-top" height="116px">
-        <div style="margin:auto; width: 30%;"></div>
+        <div style="margin:auto; width: 15%;"></div>
         <div class="brand">
             <p class="brand-name mbr-fonts-style mbr-bold display-5" style="padding: 0px; margin: 0px;">
                 <img src="assets/images_cam/logo.png" height="100%">
@@ -1258,7 +1282,7 @@
                     SUPPORT</a></li>
             </ul>
         </div>
-        <div style="margin:auto; width: 30%;"></div>
+        <div style="margin:auto; width: 15%;"></div>
         <button on="tap:sidebar.toggle" class="ampstart-btn hamburger sticky-but">
             <span></span>
             <span></span>
@@ -1269,11 +1293,11 @@
 </section>
 <section class="features10 cid-rxXxCoaYCP" id="features10-8" style="padding:auto 0 0 0 !important;width:70%; margin:auto;">
     <div class="container">
-        <div class="mbr-row mbr-justify-content-center" style="padding-left:7%;">
+        <div class="mbr-row mbr-justify-content-center" style="">
             <div class="image-block mbr-col-sm-12 mbr-col-md-6">
                 <img src="assets/images_cam/main.png" layout="responsive" height="100" alt="#">
             </div>
-            <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="padding-left:25%;">
+            <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="">
                 <img src="assets/images_cam/googleassistant.png">
                 <img src="assets/images_cam/alexa.png">
             </div>
@@ -1364,27 +1388,18 @@
 </section>
 
 <div class="lifestyle" style="background-color:#F5F5F5;width:70%;margin: 0 auto;">
-    <div class="mbr-row mbr-justify-content-center">
-        <div class="image-wrap mbr-col-sm-12 mbr-col-lg-6 lg-px mbr-col-md-6" style="padding:0;margin:0;text-align:right">
-            <div class="image-box">
-                <img src="assets/images_door/doorbell.png" layout="responsive"
-                     height="373" alt="#"
-                     tabindex="0" style="padding:0;margin:0; width:96%;border-left:11px solid white;">
-                </img>
-            </div>
-        </div>
-        <div class="image-wrap mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-6 lg-px last-child" style="padding:0;margin:0">
-            <div class="image-box">
-                <img src="assets/images_door/indoors.png" layout="responsive"
-                     height="373" alt="#"
-                     tabindex="0" style="padding:0;margin:0; width:96%;border-right:11px solid white;">
-                </img>
-            </div>
-        </div>
+    <div id="lifestyle_1" style="display: block; width: 100%;">
+        <img src="assets/images_door/lifestyle_outdoor_white.png" layout="responsive" alt="White Doorbell Lifestyle" style="width: 100%;">
+    </div>
+    <div id="lifestyle_2" style="display: none; width: 100%;">
+        <img src="assets/images_door/lifestyle_outdoor_black.png" layout="responsive" alt="Black Doorbell Lifestyle" style="width: 100%;">
+    </div>
+    <div id="lifestyle_3" style="display: none; width: 100%;">
+        <img src="assets/images_door/lifestyle_indoor_black.png" layout="responsive" alt="Indoor Doorbell Lifestyle" style="width: 100%;">
     </div>
 </div>
 
-<div class="gallery1 cid-rxXRSUfSVl" id="gallery2-2" style="background-color:#F5F5F5; width:68.9%;margin: 0 auto;border-left: 11px solid white;border-right: 11px solid white;">
+<div class="gallery1 cid-rxXRSUfSVl" id="gallery2-2" style="background-color:#F5F5F5; width: 70%;margin: 0 auto;">
     <div class="mbr-row mbr-justify-content-center">
         <div class="image-wrap lg-px mbr-col-md-6" style="text-align:center;">
             <div class="image-box" style="display:table-cell;width:50vw;text-align:center;border-right: solid 1px #D6D6D6; cursor:pointer;" onclick="showPanel_1();">
@@ -1423,7 +1438,7 @@
             <div class="mbr-row mbr-justify-content-center">
                 <div class="image-block mbr-col-sm-12 mbr-col-md-6">
                     <img src="assets/images_door/outdoor-white.png" layout="responsive"
-                         height="405" alt="#" style="padding-left:100px;">
+                         height="405" alt="#" style="max-height: 350px; max-width: 100%; width: auto; height: auto; object-fit: contain; margin: 0 auto; display: block;">
                     </img>
                 </div>
                 <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="color: #00162f !important;">
@@ -1433,7 +1448,7 @@
                     </h3>
                 </div>
             </div>
-            <div align="right" style="margin-right: 50px;">
+            <div align="right" style="">
                 <img src="assets/images_cam/googleassistant.png">
                 <img src="assets/images_cam/alexa.png">
             </div>
@@ -1441,7 +1456,7 @@
         <div class="features10" style="height:528px; padding-top: 60px; background-color: #F4F4F4;" id="product_2">
             <div class="mbr-row mbr-justify-content-center">
                 <div class="image-block mbr-col-sm-12 mbr-col-md-6">
-                    <img src="assets/images_door/outdoor-black.png" layout="responsive" height="405" alt="#" style="padding-left:9vw;">
+                    <img src="assets/images_door/outdoor-black.png" layout="responsive" height="405" alt="#" style="max-height: 350px; max-width: 100%; width: auto; height: auto; object-fit: contain; margin: 0 auto; display: block;">
                     </img>
                 </div>
                 <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="color: #00162f !important;">
@@ -1451,7 +1466,7 @@
                     </h3>
                 </div>
             </div>
-            <div align="right" style="margin-right: 50px;">
+            <div align="right" style="">
                 <img src="assets/images_cam/googleassistant.png">
                 <img src="assets/images_cam/alexa.png">
             </div>
@@ -1460,7 +1475,7 @@
             <div class="mbr-row mbr-justify-content-center">
                 <div class="image-block mbr-col-sm-12 mbr-col-md-6">
                     <img src="assets/images_door/indoor.png" layout="responsive"
-                         height="405" alt="#" style="padding-left:12vw">
+                         height="405" alt="#" style="max-height: 350px; max-width: 100%; width: auto; height: auto; object-fit: contain; margin: 0 auto; display: block;">
                     </img>
                 </div>
                 <div class="text-block mbr-col-sm-12 mbr-col-md-6" style="color: #00162f !important;">
@@ -1470,7 +1485,7 @@
                     </h3>
                 </div>
             </div>
-            <div align="right" style="margin-right: 50px;">
+            <div align="right" style="">
                 <img src="assets/images_cam/googleassistant.png">
                 <img src="assets/images_cam/alexa.png">
             </div>
@@ -1478,13 +1493,13 @@
     </div>
 </div>
 
-<section class="features15 mbr-section cid-rxXFJactrh" id="features3-g" style="width:69%; margin: 0 auto;">
+<section class="features15 mbr-section cid-rxXFJactrh" id="features3-g" style="width: 70%; margin: 0 auto;">
     <div class="container">
         <img src="assets/images_cam/features.png" width="100%">
     </div>
 </section>
 
-<section class="footer3 cid-rxXHf041rO" id="footer3-h" style="width:69%; margin: 0 auto;">
+<section class="footer3 cid-rxXHf041rO" id="footer3-h" style="width: 70%; margin: 0 auto;">
     <div class="container" style="padding:0;margin:0;">
         <div class="mbr-row mbr-justify-content-center">
             <div class="image-block mbr-col-sm-12 laser-col" style="margin: 0 auto 0 auto;width:45%;">
