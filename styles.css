@@ -407,10 +407,81 @@ body {
 }
 
 /* Portfolio Section */
+.portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) var(--transition-timing);
+    outline: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    color: var(--text-primary);
+    background: var(--accent-color);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+@media (max-width: 576px) {
+    .portfolio-tabs {
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 0.5rem;
+        padding: 0.75rem;
+    }
+    .tab-btn {
+        width: 100%;
+        padding: 0.6rem 1rem;
+    }
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+}
+
+/* Tab Content Transitions */
+.tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.tab-content.active {
+    display: grid;
+    animation: fadeInTab 0.5s forwards var(--transition-timing);
+}
+
+@keyframes fadeInTab {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .project-card {

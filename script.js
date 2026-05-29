@@ -65,4 +65,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         lastScrollTop = scrollTop;
     }, { passive: true }); // Passive listener for better scrolling performance
+
+    // 4. Portfolio Tab Interactivity
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetTab = btn.getAttribute('data-tab');
+            
+            // Remove active classes
+            tabButtons.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            
+            // Add active classes
+            btn.classList.add('active');
+            const activeContent = document.getElementById(`${targetTab}-projects`);
+            if (activeContent) {
+                activeContent.classList.add('active');
+                
+                // Trigger a scroll event to force IntersectionObserver check on newly visible elements
+                window.dispatchEvent(new Event('scroll'));
+            }
+        });
+    });
 });
