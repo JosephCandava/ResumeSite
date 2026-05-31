@@ -66,7 +66,41 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollTop = scrollTop;
     }, { passive: true }); // Passive listener for better scrolling performance
 
-    // 4. Portfolio Tab Interactivity
+    // 4. Hamburger mobile nav
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+        navLinks.classList.toggle('open', isOpen);
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // 5. Mobile read-more for about card paragraphs
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('.about-card-text p').forEach(p => {
+            p.classList.add('clamped');
+            const btn = document.createElement('button');
+            btn.className = 'read-more-btn';
+            btn.textContent = 'Read more';
+            btn.addEventListener('click', () => {
+                const expanded = p.classList.toggle('expanded');
+                p.classList.toggle('clamped', !expanded);
+                btn.textContent = expanded ? 'Read less' : 'Read more';
+            });
+            p.insertAdjacentElement('afterend', btn);
+        });
+    }
+
+    // 6. Portfolio Tab Interactivity
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
