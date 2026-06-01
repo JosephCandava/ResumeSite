@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Resource-Efficient Scroll Reveal Animations (Intersection Observer)
     const revealElements = document.querySelectorAll('.reveal');
-    
+
     const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             // Add 'active' class when element comes into view
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         header.addEventListener('click', () => {
             const isExpanded = header.getAttribute('aria-expanded') === 'true';
             const content = header.nextElementSibling;
-            
+
             // Close all other open accordions (optional, but keeps UI clean)
             accordionHeaders.forEach(otherHeader => {
                 if (otherHeader !== header && otherHeader.getAttribute('aria-expanded') === 'true') {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Navbar Hide/Show on Scroll (Resource efficient using requestAnimationFrame pattern if needed, but simple scroll event is fine for basic use)
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-    
+
     window.addEventListener('scroll', () => {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > lastScrollTop && scrollTop > 100) {
@@ -100,24 +100,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Portfolio Tab Interactivity
+    // 6. Job title cycler
+    const jobTitles = [
+        'ICT Support',
+        'ICT Officer',
+        'ICT Administrator',
+        'ERP Developer',
+        'Microsoft 365 Business Central Consultant',
+        'Oracle NetSuite Consultant',
+        'Microsoft 365 Administrator',
+        'IT Assistant',
+        'IT Support',
+        'IT Administrator',
+        'IT Specialist',
+        'IT Consultant',
+        'ERP Consultant',
+        'Microsoft 365 Consultant',
+        'Microsoft 365 Support',
+        'Microsoft Dynamics 365 Business Central Developer',
+        'Microsoft Dynamics 365 Business Central Consultant',
+        'Microsoft Dynamics 365 Business Central Support',
+        'Microsoft Dynamics 365 Business Central Administrator',
+        'Microsoft Excel Developer',
+        'Microsoft Power BI Developer',
+        'Microsoft Power Automate Developer',
+    ];
+    const jobTitleEl = document.getElementById('job-title');
+    let jobTitleIndex = 0;
+
+    function cycleJobTitle() {
+        jobTitleEl.style.opacity = '0';
+        setTimeout(() => {
+            jobTitleIndex = (jobTitleIndex + 1) % jobTitles.length;
+            jobTitleEl.textContent = jobTitles[jobTitleIndex];
+            jobTitleEl.style.opacity = '1';
+        }, 400);
+    }
+
+    jobTitleEl.style.transition = 'opacity 0.4s ease';
+    setInterval(cycleJobTitle, 2500);
+
+    // 7. Portfolio Tab Interactivity
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
 
     tabButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const targetTab = btn.getAttribute('data-tab');
-            
+
             // Remove active classes
             tabButtons.forEach(b => b.classList.remove('active'));
             tabContents.forEach(c => c.classList.remove('active'));
-            
+
             // Add active classes
             btn.classList.add('active');
             const activeContent = document.getElementById(`${targetTab}-projects`);
             if (activeContent) {
                 activeContent.classList.add('active');
-                
+
                 // Trigger a scroll event to force IntersectionObserver check on newly visible elements
                 window.dispatchEvent(new Event('scroll'));
             }
