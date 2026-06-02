@@ -102,9 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 6. Job title cycler
     const jobTitles = [
-        'IT Assistant',
-        'IT Support Officer',
         'IT Administrator',
+        'IT Support Officer',
         'ICT Support Officer',
         'ICT Administrator',
         'ERP Developer',
@@ -120,9 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
         'Microsoft Dynamics 365 Business Central Consultant',
         'Microsoft Dynamics 365 Business Central Support',
         'Microsoft Dynamics 365 Business Central Administrator',
+        'Microsoft Dynamics 365 Business Central Specialist',
         'Microsoft Excel Developer',
         'Microsoft Power BI Developer',
         'Microsoft Power Automate Developer',
+        'IT Support',
+        'ICT Support',
+        'IT Assistant',
+        'Frontend Web Developer',
+        'Systems Administrator',
     ];
     const jobTitleEl = document.getElementById('job-title');
     let jobTitleIndex = 0;
