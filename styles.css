@@ -186,6 +186,33 @@ body {
     background: rgba(0, 168, 232, 0.08) !important;
 }
 
+.nav-icon-btn[data-tooltip] {
+    position: relative;
+}
+
+.nav-icon-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(11, 14, 20, 0.92);
+    color: var(--text-primary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    border: 1px solid var(--glass-border);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s var(--transition-timing);
+}
+
+.nav-icon-btn[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
