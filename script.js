@@ -103,10 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Job title cycler
     const jobTitles = [
         'IT Assistant',
-        'IT Support',
+        'IT Support Officer',
         'IT Administrator',
-        'ICT Support',
-        'ICT Officer',
+        'ICT Support Officer',
         'ICT Administrator',
         'ERP Developer',
         'Microsoft 365 Business Central Consultant',

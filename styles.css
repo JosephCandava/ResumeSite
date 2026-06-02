@@ -167,6 +167,25 @@ body {
     color: var(--text-primary);
 }
 
+.nav-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text-secondary) !important;
+    transition: color var(--transition-speed), border-color var(--transition-speed), background var(--transition-speed);
+}
+
+.nav-icon-btn:hover {
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color);
+    background: rgba(0, 168, 232, 0.08) !important;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -666,6 +685,12 @@ body {
     border-color: var(--accent-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 168, 232, 0.2);
+}
+
+span.pill:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.8);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
 }
 
 /* Contact Section */

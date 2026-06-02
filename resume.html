@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Candava — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --accent: #0069a8;
+            --text: #1a1a2e;
+            --muted: #555;
+            --border: #d1d5db;
+            --page-width: 210mm;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: #e8edf2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem 4rem;
+        }
+
+        /* ── Print toolbar ── */
+        .print-bar {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+        }
+
+        .print-bar a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .btn-back {
+            background: #fff;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+
+        .btn-back:hover { background: #f1f5f9; }
+
+        .btn-print {
+            background: var(--accent);
+            color: #fff;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-print:hover { background: #005590; }
+
+        /* ── Resume paper ── */
+        .resume {
+            background: #fff;
+            width: var(--page-width);
+            max-width: 100%;
+            padding: 14mm 16mm;
+            box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+            border-radius: 4px;
+        }
+
+        /* ── Header ── */
+        .resume-header {
+            border-bottom: 2.5px solid var(--accent);
+            padding-bottom: 0.9rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .resume-header h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+
+        .resume-header .role {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-top: 0.15rem;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+            margin-top: 0.6rem;
+            font-size: 0.82rem;
+            color: var(--muted);
+        }
+
+        .contact-row a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .contact-row a:hover { color: var(--accent); }
+
+        .contact-row span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* ── Sections ── */
+        .section {
+            margin-bottom: 1.2rem;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.3rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Summary */
+        .summary p {
+            font-size: 0.88rem;
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 1rem;
+        }
+
+        .exp-item:last-child { margin-bottom: 0; }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        .exp-header h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .exp-date {
+            font-size: 0.8rem;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .exp-company {
+            font-size: 0.83rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-top: 0.05rem;
+        }
+
+        .exp-desc {
+            font-size: 0.83rem;
+            color: var(--muted);
+            margin-top: 0.35rem;
+            line-height: 1.55;
+        }
+
+        .exp-list {
+            margin-top: 0.4rem;
+            padding-left: 1.1rem;
+            font-size: 0.83rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .exp-list li { margin-bottom: 0.2rem; }
+
+        /* Skills */
+        .skills-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem 1.5rem;
+        }
+
+        .skill-group h4 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.3rem;
+        }
+
+        .skill-group p {
+            font-size: 0.8rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        /* Certifications */
+        .cert-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem 0.6rem;
+        }
+
+        .cert-tag {
+            font-size: 0.75rem;
+            color: var(--muted);
+            background: #f1f5f9;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.15rem 0.5rem;
+        }
+
+        /* ── Print styles ── */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .print-bar { display: none; }
+
+            .resume {
+                box-shadow: none;
+                border-radius: 0;
+                width: 100%;
+                padding: 10mm 14mm;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 10mm 12mm;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="print-bar">
+        <a href="index.html" class="btn-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Back
+        </a>
+        <button class="btn-print" onclick="window.print()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Print / Save as PDF
+        </button>
+    </div>
+
+    <div class="resume">
+
+        <!-- Header -->
+        <header class="resume-header">
+            <h1>Joseph Candava</h1>
+            <div class="role">Developer / IT Administrator · Microsoft Dynamics 365 Business Central</div>
+            <div class="contact-row">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <a href="mailto:joseph.candava@outlook.com.au">joseph.candava@outlook.com.au</a>
+                </span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <a href="https://www.linkedin.com/in/joseph-candava/" target="_blank">linkedin.com/in/joseph-candava</a>
+                </span>
+                <span>Sydney, NSW, Australia</span>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="section summary">
+            <div class="section-title">Professional Summary</div>
+            <p>IT professional with 8+ years of experience specialising in Microsoft Dynamics 365 Business Central development, IT administration, and business software optimisation. Proven ability to bridge technical architecture with seamless business operations — delivering AL extensions, Power BI integrations, automated workflows, and reliable helpdesk support for mid-to-large organisations.</p>
+        </section>
+
+        <!-- Experience -->
+        <section class="section">
+            <div class="section-title">Professional Experience</div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <h3>Developer / Administrator</h3>
+                    <span class="exp-date">Aug 2018 – Present</span>
+                </div>
+                <div class="exp-company">Laser Corporation · Full-time · Sydney, NSW</div>
+                <p class="exp-desc">Responsible for improving and maintaining systems at the software level while assisting staff with IT troubleshooting and Microsoft Dynamics 365 configuration.</p>
+                <ul class="exp-list">
+                    <li>Architected and produced Microsoft Business Central extensions using AL and VS Code to introduce new fields and custom report layouts.</li>
+                    <li>Optimised Power BI compatibility by introducing specialised fields for data reporting and analysis.</li>
+                    <li>Managed Microsoft 365 Admin Center, including licence assignment, domain joins, and Entra/Intune account resolution.</li>
+                    <li>Utilised Microsoft PowerShell cmdlets to manage Azure objects responsibly and efficiently.</li>
+                    <li>Configured Job Queue automations to process Sales Orders, dispatch overdue invoice reminders, and refresh Power BI role centre widgets.</li>
+                    <li>Resolved complex HelpDesk tickets via Atlassian Jira, FreshDesk, and Microsoft Planner, including device recovery from power outages.</li>
+                    <li>Supported remote collaboration and troubleshooting using Zoom, Teams, TeamViewer, and AnyDesk.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <h3>Frontend Web Developer Intern</h3>
+                    <span class="exp-date">Jan 2018 – Jul 2018</span>
+                </div>
+                <div class="exp-company">QualityTrade · Full-time</div>
+                <p class="exp-desc">Recreated websites in custom code and gained first-hand experience with Agile methodologies.</p>
+                <ul class="exp-list">
+                    <li>Developed and refined frontend code for various web projects, ensuring high-quality user interfaces.</li>
+                    <li>Collaborated in an Agile environment using Kanban boards and participating in sprint cycles.</li>
+                    <li>Gained practical experience in responsive design and modern web standards.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <h3>ICT Support Trainee</h3>
+                    <span class="exp-date">Dec 2011 – Dec 2012</span>
+                </div>
+                <div class="exp-company">Catholic Education Diocese of Parramatta</div>
+                <p class="exp-desc">Assisted education faculty with IT issues using a troubleshooting ticketing system.</p>
+                <ul class="exp-list">
+                    <li>Provided technical support for hardware and software issues across the faculty.</li>
+                    <li>Managed and resolved support tickets in a timely manner to maintain operational efficiency.</li>
+                    <li>Gained foundational experience in enterprise IT support and user communication.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-row">
+                <div class="skill-group">
+                    <h4>Platforms &amp; Tools</h4>
+                    <p>Microsoft Dynamics 365 Business Central, Microsoft 365 SharePoint, Microsoft 365 Admin Center, Microsoft Intune / Entra, Microsoft Azure</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Development &amp; Data</h4>
+                    <p>AL (Business Central), Microsoft Power BI, Visual Studio Code, PowerShell, SQL, Apache FreeMarker, DAX, Power BI Report Layout Expressions</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Languages &amp; Formats</h4>
+                    <p>HTML, CSS, SCSS, JavaScript, PHP, JSON, XML, CSV, Excel Formulas, BAT / Batch Script, VBScript, PowerShell Script (PS1)</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Support &amp; Productivity</h4>
+                    <p>Atlassian Jira, FreshDesk, Microsoft OneNote, Microsoft Office, TeamViewer, AnyDesk, Microsoft Planner</p>
+                </div>
+                <div class="skill-group">
+                    <h4>E-Commerce Platforms</h4>
+                    <p>BigCommerce, OpenCart, WordPress, Wix</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <div class="section-title">Certifications &amp; Training</div>
+            <div class="cert-grid">
+                <span class="cert-tag">IT Certificate III</span>
+                <span class="cert-tag">IT Certificate II</span>
+                <span class="cert-tag">C++ Essential Training for Career Changers</span>
+                <span class="cert-tag">Adobe Color Essential Training</span>
+                <span class="cert-tag">Migrating from Windows 7 to Windows 8</span>
+                <span class="cert-tag">Windows 8.1: Tips and Tricks</span>
+                <span class="cert-tag">Learning Windows 8.1 Phones</span>
+                <span class="cert-tag">Visual Studio 2017: First Look</span>
+                <span class="cert-tag">Learning Virtualization</span>
+                <span class="cert-tag">Windows 10: Administration</span>
+                <span class="cert-tag">iOS 11: iPhone and iPad New Features</span>
+                <span class="cert-tag">Writing a Resume</span>
+                <span class="cert-tag">Outlook 2016 Essential Training</span>
+                <span class="cert-tag">Mac OS X El Capitan Essential Training</span>
+                <span class="cert-tag">CSS: Visual Optimization</span>
+                <span class="cert-tag">PHP with MySQL Essential Training: 1 The Basics</span>
+                <span class="cert-tag">Avoiding Phishing Scams</span>
+                <span class="cert-tag">Migrating from Office 2003 to Office 2016</span>
+                <span class="cert-tag">HTML &amp; CSS: Creating Forms</span>
+                <span class="cert-tag">Windows 10 Anniversary Update New Features</span>
+                <span class="cert-tag">PowerPoint 2016 Essential Training</span>
+                <span class="cert-tag">Cybersecurity Awareness: Backing Up Your Data</span>
+                <span class="cert-tag">Windows 10 Creators Update New Features</span>
+                <span class="cert-tag">Unity 3D: 3.5 Essential Training</span>
+                <span class="cert-tag">Unity 5: Network Gaming</span>
+                <span class="cert-tag">Careers in the Game Industry</span>
+                <span class="cert-tag">Introduction to Graphic Design</span>
+                <span class="cert-tag">2D Game Design and Development Essential Training</span>
+                <span class="cert-tag">Cert Prep: Unity Fundamentals</span>
+                <span class="cert-tag">XHTML and HTML Essential Training</span>
+                <span class="cert-tag">HTML Essential Training</span>
+                <span class="cert-tag">Office 365: Excel Essential Training</span>
+                <span class="cert-tag">Building Self-Confidence</span>
+                <span class="cert-tag">Developing Resourcefulness</span>
+                <span class="cert-tag">Betty Liu on Career Success</span>
+                <span class="cert-tag">Job Hunting for College Grads</span>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
