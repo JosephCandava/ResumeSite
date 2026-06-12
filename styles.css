@@ -43,6 +43,16 @@ body {
     font-optical-sizing: auto;
 }
 
+p {
+    text-wrap: pretty;
+    orphans: 3;
+    widows: 3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
 /* Background Effects */
 .background-effects {
     position: fixed;
@@ -112,9 +122,9 @@ body {
 .section-subtitle {
     color: var(--text-secondary);
     margin-bottom: 3rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
-    text-wrap: pretty;
+    white-space: nowrap;
 }
 
 /* Glassmorphism Classes */
