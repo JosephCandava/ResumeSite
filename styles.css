@@ -777,9 +777,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .scrollable-pills {
     overflow-y: auto !important;
+    overflow-x: hidden;
     flex-grow: 1;
     scrollbar-width: thin;
     scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+    padding: 0.75rem;
+    margin: -0.75rem;
 }
 
 .scrollable-pills::-webkit-scrollbar {

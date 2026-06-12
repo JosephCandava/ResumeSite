@@ -198,6 +198,36 @@
 
         .exp-list li { margin-bottom: 0.2rem; }
 
+        /* Education */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .edu-item:last-child { margin-bottom: 0; }
+
+        .edu-left h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .edu-left .edu-institution {
+            font-size: 0.83rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-top: 0.05rem;
+        }
+
+        .edu-date {
+            font-size: 0.8rem;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
         /* Skills */
         .skills-row {
             display: grid;
@@ -232,6 +262,14 @@
             border: 1px solid var(--border);
             border-radius: 4px;
             padding: 0.15rem 0.5rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .cert-tag:hover {
+            background: #e2e8f0;
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
         /* ── Print styles ── */
@@ -347,6 +385,27 @@
             </div>
         </section>
 
+        <!-- Education -->
+        <section class="section">
+            <div class="section-title">Education</div>
+
+            <div class="edu-item">
+                <div class="edu-left">
+                    <h3>Bachelor Degree of Information Communication Technology</h3>
+                    <div class="edu-institution">Western Sydney University Parramatta</div>
+                </div>
+                <span class="edu-date">2014 – 2017</span>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-left">
+                    <h3>Diploma of Information Communication Technology</h3>
+                    <div class="edu-institution">University of Western Sydney Nirimba</div>
+                </div>
+                <span class="edu-date">2013 – 2014</span>
+            </div>
+        </section>
+
         <!-- Skills -->
         <section class="section">
             <div class="section-title">Technical Skills</div>
@@ -368,8 +427,8 @@
                     <p>Atlassian Jira, FreshDesk, Microsoft OneNote, Microsoft Office, TeamViewer, AnyDesk, Microsoft Planner</p>
                 </div>
                 <div class="skill-group">
-                    <h4>E-Commerce Platforms</h4>
-                    <p>BigCommerce, OpenCart, WordPress, Wix</p>
+                    <h4>E-Commerce Platforms &amp; Frameworks</h4>
+                    <p>BigCommerce, OpenCart, WordPress, Wix · Stencil, Handlebars.js, Twig, jQuery, WooCommerce, Velo (Wix)</p>
                 </div>
             </div>
         </section>
@@ -378,42 +437,42 @@
         <section class="section">
             <div class="section-title">Certifications &amp; Training</div>
             <div class="cert-grid">
-                <span class="cert-tag">IT Certificate III</span>
-                <span class="cert-tag">IT Certificate II</span>
-                <span class="cert-tag">C++ Essential Training for Career Changers</span>
-                <span class="cert-tag">Adobe Color Essential Training</span>
-                <span class="cert-tag">Migrating from Windows 7 to Windows 8</span>
-                <span class="cert-tag">Windows 8.1: Tips and Tricks</span>
-                <span class="cert-tag">Learning Windows 8.1 Phones</span>
-                <span class="cert-tag">Visual Studio 2017: First Look</span>
-                <span class="cert-tag">Learning Virtualization</span>
-                <span class="cert-tag">Windows 10: Administration</span>
-                <span class="cert-tag">iOS 11: iPhone and iPad New Features</span>
-                <span class="cert-tag">Writing a Resume</span>
-                <span class="cert-tag">Outlook 2016 Essential Training</span>
-                <span class="cert-tag">Mac OS X El Capitan Essential Training</span>
-                <span class="cert-tag">CSS: Visual Optimization</span>
-                <span class="cert-tag">PHP with MySQL Essential Training: 1 The Basics</span>
-                <span class="cert-tag">Avoiding Phishing Scams</span>
-                <span class="cert-tag">Migrating from Office 2003 to Office 2016</span>
-                <span class="cert-tag">HTML &amp; CSS: Creating Forms</span>
-                <span class="cert-tag">Windows 10 Anniversary Update New Features</span>
-                <span class="cert-tag">PowerPoint 2016 Essential Training</span>
-                <span class="cert-tag">Cybersecurity Awareness: Backing Up Your Data</span>
-                <span class="cert-tag">Windows 10 Creators Update New Features</span>
-                <span class="cert-tag">Unity 3D: 3.5 Essential Training</span>
-                <span class="cert-tag">Unity 5: Network Gaming</span>
-                <span class="cert-tag">Careers in the Game Industry</span>
-                <span class="cert-tag">Introduction to Graphic Design</span>
-                <span class="cert-tag">2D Game Design and Development Essential Training</span>
-                <span class="cert-tag">Cert Prep: Unity Fundamentals</span>
-                <span class="cert-tag">XHTML and HTML Essential Training</span>
-                <span class="cert-tag">HTML Essential Training</span>
-                <span class="cert-tag">Office 365: Excel Essential Training</span>
-                <span class="cert-tag">Building Self-Confidence</span>
-                <span class="cert-tag">Developing Resourcefulness</span>
-                <span class="cert-tag">Betty Liu on Career Success</span>
-                <span class="cert-tag">Job Hunting for College Grads</span>
+                <a href="https://training.gov.au/Training/Details/ICT30120/qualdetails" target="_blank" rel="noopener noreferrer" class="cert-tag">IT Certificate III</a>
+                <a href="https://training.gov.au/Training/Details/ICA20105/qualdetails" target="_blank" rel="noopener noreferrer" class="cert-tag">IT Certificate II</a>
+                <a href="https://www.linkedin.com/learning/c-plus-plus-essential-training-for-career-changers" target="_blank" rel="noopener noreferrer" class="cert-tag">C++ Essential Training for Career Changers</a>
+                <a href="https://www.linkedin.com/learning/adobe-color-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">Adobe Color Essential Training</a>
+                <a href="https://www.linkedin.com/learning/migrating-from-windows-7-to-windows-8" target="_blank" rel="noopener noreferrer" class="cert-tag">Migrating from Windows 7 to Windows 8</a>
+                <a href="https://www.linkedin.com/learning/windows-8.1-tips-and-tricks" target="_blank" rel="noopener noreferrer" class="cert-tag">Windows 8.1: Tips and Tricks</a>
+                <a href="https://www.linkedin.com/learning/learning-windows-8.1-phones" target="_blank" rel="noopener noreferrer" class="cert-tag">Learning Windows 8.1 Phones</a>
+                <a href="https://www.linkedin.com/learning/visual-studio-2017-first-look" target="_blank" rel="noopener noreferrer" class="cert-tag">Visual Studio 2017: First Look</a>
+                <a href="https://www.linkedin.com/learning/learning-virtualization" target="_blank" rel="noopener noreferrer" class="cert-tag">Learning Virtualization</a>
+                <a href="https://www.linkedin.com/learning/windows-10-administration" target="_blank" rel="noopener noreferrer" class="cert-tag">Windows 10: Administration</a>
+                <a href="https://www.linkedin.com/learning/ios-11-iphone-and-ipad-new-features" target="_blank" rel="noopener noreferrer" class="cert-tag">iOS 11: iPhone and iPad New Features</a>
+                <a href="https://www.linkedin.com/learning/writing-a-resume" target="_blank" rel="noopener noreferrer" class="cert-tag">Writing a Resume</a>
+                <a href="https://www.linkedin.com/learning/outlook-2016-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">Outlook 2016 Essential Training</a>
+                <a href="https://www.linkedin.com/learning/mac-os-x-el-capitan-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">Mac OS X El Capitan Essential Training</a>
+                <a href="https://www.linkedin.com/learning/css-visual-optimization" target="_blank" rel="noopener noreferrer" class="cert-tag">CSS: Visual Optimization</a>
+                <a href="https://www.linkedin.com/learning/php-with-mysql-essential-training-1-the-basics" target="_blank" rel="noopener noreferrer" class="cert-tag">PHP with MySQL Essential Training: 1 The Basics</a>
+                <a href="https://www.linkedin.com/learning/avoiding-phishing-scams" target="_blank" rel="noopener noreferrer" class="cert-tag">Avoiding Phishing Scams</a>
+                <a href="https://www.linkedin.com/learning/migrating-from-office-2003-to-office-2016" target="_blank" rel="noopener noreferrer" class="cert-tag">Migrating from Office 2003 to Office 2016</a>
+                <a href="https://www.linkedin.com/learning/html-css-creating-forms" target="_blank" rel="noopener noreferrer" class="cert-tag">HTML &amp; CSS: Creating Forms</a>
+                <a href="https://www.linkedin.com/learning/windows-10-anniversary-update-new-features" target="_blank" rel="noopener noreferrer" class="cert-tag">Windows 10 Anniversary Update New Features</a>
+                <a href="https://www.linkedin.com/learning/powerpoint-2016-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">PowerPoint 2016 Essential Training</a>
+                <a href="https://www.linkedin.com/learning/cybersecurity-awareness-backing-up-your-data" target="_blank" rel="noopener noreferrer" class="cert-tag">Cybersecurity Awareness: Backing Up Your Data</a>
+                <a href="https://www.linkedin.com/learning/windows-10-creators-update-new-features" target="_blank" rel="noopener noreferrer" class="cert-tag">Windows 10 Creators Update New Features</a>
+                <a href="https://www.linkedin.com/learning/unity-3d-3.5-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">Unity 3D: 3.5 Essential Training</a>
+                <a href="https://www.linkedin.com/learning/unity-5-network-gaming" target="_blank" rel="noopener noreferrer" class="cert-tag">Unity 5: Network Gaming</a>
+                <a href="https://www.linkedin.com/learning/careers-in-the-game-industry" target="_blank" rel="noopener noreferrer" class="cert-tag">Careers in the Game Industry</a>
+                <a href="https://www.linkedin.com/learning/introduction-to-graphic-design" target="_blank" rel="noopener noreferrer" class="cert-tag">Introduction to Graphic Design</a>
+                <a href="https://www.linkedin.com/learning/2d-game-design-and-development-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">2D Game Design and Development Essential Training</a>
+                <a href="https://www.linkedin.com/learning/cert-prep-unity-fundamentals" target="_blank" rel="noopener noreferrer" class="cert-tag">Cert Prep: Unity Fundamentals</a>
+                <a href="https://www.linkedin.com/learning/xhtml-and-html-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">XHTML and HTML Essential Training</a>
+                <a href="https://www.linkedin.com/learning/html-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">HTML Essential Training</a>
+                <a href="https://www.linkedin.com/learning/office-365-excel-essential-training" target="_blank" rel="noopener noreferrer" class="cert-tag">Office 365: Excel Essential Training</a>
+                <a href="https://www.linkedin.com/learning/building-self-confidence" target="_blank" rel="noopener noreferrer" class="cert-tag">Building Self-Confidence</a>
+                <a href="https://www.linkedin.com/learning/developing-resourcefulness" target="_blank" rel="noopener noreferrer" class="cert-tag">Developing Resourcefulness</a>
+                <a href="https://www.linkedin.com/learning/betty-liu-on-career-success" target="_blank" rel="noopener noreferrer" class="cert-tag">Betty Liu on Career Success</a>
+                <a href="https://www.linkedin.com/learning/job-hunting-for-college-grads" target="_blank" rel="noopener noreferrer" class="cert-tag">Job Hunting for College Grads</a>
             </div>
         </section>
 
