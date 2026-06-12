@@ -576,6 +576,28 @@ h1, h2, h3, h4, h5, h6 {
     text-wrap: pretty;
 }
 
+/* Education Section */
+.edu-item {
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform var(--transition-speed);
+}
+
+.edu-item:hover {
+    transform: translateX(5px);
+}
+
+.edu-logo {
+    background-color: #fff;
+    padding: 4px;
+    object-fit: contain;
+}
+
 /* Portfolio Section */
 .portfolio-tabs {
     display: flex;
@@ -997,6 +1019,9 @@ span.pill:hover {
     .role-meta .date { font-size: 0.8rem; }
     .content-inner { padding: 0 1.25rem 1.25rem; padding-top: 1.25rem; }
     .experience-desc { font-size: 0.95rem; margin-bottom: 1rem; }
+
+    /* Education */
+    .edu-item { padding: 1rem 1.25rem; }
 
     /* Portfolio */
     .projects-grid { grid-template-columns: 1fr; gap: 1.25rem; }
